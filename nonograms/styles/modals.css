@@ -1,0 +1,84 @@
+.finish-modal,
+.results-modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--bg-color);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  padding: 30px;
+}
+.game-over__result {
+  font-size: 1.53rem;
+}
+.game-over p {
+  font-size: 1.15rem;
+  margin: 15px 0 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.game-over__button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: #5455ac;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+}
+.game-over__button:hover {
+  background: #9899cd;
+}
+.game-over__result_loser {
+  color: #964c65;
+}
+.game-over__result_winner {
+  color: #80dd13;
+}
+
+/* Results Modal */
+.results-table {
+  position: absolute;
+  top: 25vmin;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+thead {
+  line-height: 40px;
+}
+th {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+}
+td {
+  color: white;
+  font-size: 18px;
+}
+td:nth-of-type(1) {
+  width: 8vmin;
+  text-align: center;
+}
+td:nth-of-type(2) {
+  width: 45vmin;
+  text-align: center;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="217"
+   height="216"
+   viewBox="0 0 217 216"
+   sodipodi:docname="smile.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-16,-15)">
+    <path
+       style="fill:#000000"
+       d="M 59.666667,230.33333 C 59.3,229.96667 59,220.29167 59,208.83333 V 188 H 37.5 16 V 166.5 145 H 37.5 59 V 166.5 188 H 124.5 190 V 166.5 145 H 211.5 233 V 166.5 188 H 211.5 190 v 21.5 21.5 h -64.83333 c -35.658337,0 -65.133337,-0.3 -65.500003,-0.66667 z M 16,58 V 15 h 43 43 v 43 43 H 59 16 Z m 131,0 V 15 h 43 43 v 43 43 h -43 -43 z"
+       id="path1" />
+  </g>
+</svg>

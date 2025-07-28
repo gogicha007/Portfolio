@@ -1,0 +1,72 @@
+@import "./styles/header.css";
+@import "./styles/main.css";
+@import "./styles/modals.css";
+
+:root {
+  --accent-color: #fafafa;
+  --inp-empty: ;
+  --inp-checked: ;
+  --bg-color: #fafafa;
+  --text-color: #000000;
+  --cross-color: rgba(0, 0, 0, 1);
+  --cross-color-t: rgba(0, 0, 0, 0);
+  --svg-bg: var(--bg-color);
+
+  /* --cell-size: 5vmin; */
+  /* --board-size: 45vmin; */
+  /* --board-top: 9vmin; */
+}
+* {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: "clig" off, "liga" off;
+  box-sizing: border-box;
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  gap: 2vmin;
+}
+span {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.dark {
+  --accent-color: #fafafa;
+  --bg-color: #111827;
+  --inp-empty: ;
+  --inp-checked: #C26F6A;
+  --text-color: #fafafa;
+  --cross-color: rgba(250, 250, 250, 1);
+  --cross-color-t: rgba(250, 250, 250, 0);
+  --svg-bg: var(--text-color)
+}
+@media (max-width: 768px) {
+  body {
+    gap: 3vmin;
+  }
+}
+@media (max-width: 620px) {
+  body {
+    gap: 8vmin;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  span {
+    font-size: 14px;
+  }
+}
