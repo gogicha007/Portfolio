@@ -1,0 +1,1154 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 1440px;
+    margin: 0 auto;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+header {
+    position: relative;
+    background-color: #0C0C0E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+button {
+    border-width: 1px;
+    transition: 0.7s ease;
+}
+h1 {
+    font-family: 'Forum', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    color: #FFFFFF;
+    height: 50px;
+    line-height: 50px;
+    width: 350px;
+    text-align: center;
+}
+.headerMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-right: 20px;
+    align-items: center;
+}
+nav {
+    height: 50px;
+    margin-top: 0;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 30px;
+}
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+nav ul li a:hover {
+    color: #BB945F
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 45px;
+    height: 2px;
+    margin: 9px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    pointer-events: none
+}
+.profile {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+    width: 80px;
+    height: auto;
+    background: #FFF;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s ease;
+    z-index: 1;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+#auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    list-style-type: none;
+    margin: 15px 0px 20px;
+    padding: 0;
+    cursor: pointer;
+}
+#auth li:nth-of-type(n+3) {
+    display: none
+}
+
+.profile p:nth-of-type(1) {
+    margin: 10px 0;
+    font-weight: 700;
+}
+.profLine {
+    width: 40px;
+    height: 1px;
+    background: #BB945F;
+    align-self: center;
+}
+.avatar {
+    width: 28px;
+    height: 28px;
+    text-decoration: none
+}
+.initials {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    background-color: #FFF;;
+    color: #BB945F;;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
+    text-transform: uppercase;
+}
+/* Welcome section*/
+.welcome {
+    position:relative;
+    width:100%;
+    height:600px;
+    background: url('images/bookshelves.jpeg') lightgray 50% / cover no-repeat; 
+}
+.welcome-bg {
+    position: absolute;
+    top: 220px;
+    width: 520px;
+    height: 150px;
+    padding: 35px 40px;
+    margin: 0px;
+    background-color: #0C0C0E;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about, .favorites, .coffee, .contacts, .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+h2 {
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px 0px;
+}
+.line {
+    width: 50px;
+    height: 1px;
+    background: #0C0C0E;
+    align-self: center;
+}
+.about {
+    align-items: center;
+}
+.about h3 {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+}
+.slider {
+    display: flex;
+    align-items: center;
+}
+.slider-inner {
+    width: 1400px;
+    overflow: hidden;
+}
+.prev, .next {
+    display: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border: 0;
+    background: transparent;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s ease;
+    /* margin: 0 50px; */
+}
+.next {
+    margin: 0 0 0 50px;
+}
+.prev {
+    margin: 0 50px 0 0;
+}
+.prev span, .next span {
+    font-size: 30px;
+}
+.prev:disabled, .next:disabled {
+    color: #d3d3d3
+}
+.about-images {
+    display: inline-flex;
+    transition: transform 0.6s;
+    transform: translateX(0px);
+    justify-content: space-between;
+    gap: 25px;
+}
+.about-images img {
+    display: block;
+    width: 450px;
+    height: 560px;
+    flex-shrink: 0;
+}
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 20px;
+    gap: 10px;
+}
+.dot {
+    width: 16px;
+    height: 16px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: #0C0C0E;
+    border-radius: 16px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.dot:nth-child(n+4) {
+    display: none
+}
+.dot.active, .dot:hover {
+    background: #BB945F;
+}
+/* Favorites section */
+.favorites:  {
+    position: relative
+}
+.favorites p {
+    font-weight: 700;
+    margin: 40px 0px 0px;
+}
+.seasons {
+    top: 20px;
+    display: flex;
+    background-color:  rgba(255, 255, 255, 0.4);
+    flex-direction: column;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: left;
+    gap: 40px;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+.radios {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 30px
+}
+.seasonsItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.seasonsItem input {
+    margin: 0;
+}
+.seasonsItem label {
+    padding: 5px
+}
+.booksContainer {
+    position: relative;
+    height: 1150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.booksWrapper {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.booksWrapper:first-child {
+    visibility: visible
+}
+.book {
+    display: flex;
+    width: 590px;
+    height: 555px;
+    transition: opacity 1s;
+}
+.bg-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 548px;
+    height: 553px;
+    border: 1px solid;
+    flex-shrink: 0;
+}
+.staffPicks {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0px;
+    padding: 15px 20px 0px;
+}
+.pickLine {
+    width: 60px;
+    height: 1px;
+    background: #BB945F;
+    margin: 0px 20px;
+}
+.buy_btn {
+    width: 75px;
+    height: 30px;
+    margin: 15px 20px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    background: #FFFFFF;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-self: stretch;
+}
+.own {
+    content: 'own';
+    border: 1px solid #BB945F;
+    color: #BB945F;
+    cursor: auto;
+}
+.buy_btn:hover:not([disabled]) {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+}
+.title {
+    margin: 0px 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+.annotation {
+    flex-shrink: 0;
+    margin: 0px 20px;
+    width: 355px;
+    height: 320px;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.bookCover {
+    align-self: flex-end;
+}
+.book img {
+    width: 200px;
+    height: 300px;
+    align-self: flex-end;
+    transform: translate(-155px)
+}
+/* favorites slider animation */
+.fadeIn {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.7s linear 0.8s
+    /* animation-name: fade-in;
+    animation-duration: 1.5s; */
+}
+.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s linear
+    /* animation-name: fade-out;
+    animation-duration: 1.5s; */
+}
+/* end of slider animation */
+/* Coffee shop */
+.coffee {
+    margin-bottom: 40px;
+}
+.coffeeAd {
+    width: 99%;
+    margin: 40px 0px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.beverages, .cakes {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menuTitle {
+    color: #BB945F;
+    font-family: Forum;
+    font-size: 40px;
+}
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+}
+.beverages .itemName {
+    width: 200px
+}
+.cakes .menuItems {
+    justify-content: flex-end;
+}
+.cakes .menuTitle {
+    text-align: right
+}
+.itemLine {
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+    align-self: center;
+    margin-left: 60px;
+}
+.itemPrice {
+    font-family: Forum;
+    margin-left: 60px;
+}
+/* Contacts section */
+.contactsWrapper, .cardsWrapper {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.contactsInfo {
+    color: #000;
+    text-align: left;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.contactsInfo a {
+    text-decoration: none;
+    color: #000
+}
+.contactsMap {
+    width: 696px;
+    height: 414px;
+    background: url("images/map.png"), lightgray 50% / cover no-repeat;
+}
+/* Cards */
+.findCard {
+    width: 600px;
+    margin: 0;
+}
+.findCard:first-child {
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+.cardForm {
+    width: 600px;
+    height: 386px;
+    border: 3px solid #BB945F;
+    background: #FFF;
+    text-align: center
+}
+.cardForm button {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    padding: 10px 40px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.cardForm button:hover {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+}
+.cardInput {
+    width: 560px;
+    height: 272px;
+    margin: 20px;
+    background: #BB945F;
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+}
+.cardInput p {
+    height: 50px;
+    text-align: left;
+    margin: 0px 20px;
+    padding: 20px 0 0;
+}
+.cardInput input {
+    width: 498px;
+    height: 66px;
+    border: 0; 
+    border-radius: 10px;
+    background: #FFF;
+    margin: 12.5px 20px;
+    padding-left: 20px; 
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+.readerRates {
+    display: none;
+    justify-content: center;
+    gap: 35px;
+}
+.rate {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+.rate p {
+    margin: 0;
+    padding: 0;
+}
+.rate img {
+    width: 20px;
+    height: 21px;
+    align-self: center;
+}
+.getCard {
+    text-align: right;
+}
+.getCard p:nth-child(1) {
+    color: #000;
+    text-align: center;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin: 0 0 20px;
+    text-align: right;
+}
+.getCard p:nth-child(2) {
+    width: 456px;
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 0.4px;
+}
+.getCard button:nth-child(3) {
+    display: none;
+}
+.authBtns {
+    width: 75px;
+    height: 30px;
+    background: #FFFFFF;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+}
+.authBtns:hover:not([disabled]) {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+}
+footer {
+    width: 1440px;
+    height: 250px;
+    background: #0C0C0E;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+footer p {
+    margin: 0;
+}
+footer a {
+    text-decoration: none;
+    color: #FFF;
+}
+.footerFirst, .footerSecond, .footerThird {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.footerFirst {
+    padding-top: 20px;
+}
+.footerSocial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.footerLine {
+    width: 1440 px;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 20px 20px 20px;
+}
+.footerThird {
+    margin-top: 50px;
+}
+/* modals */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+.registerContent {
+    width: 250px;
+    height: 382px;
+    background-color: #FFFFFF;
+    /* padding: 0 15px ; */
+    font-weight: 400;
+    line-height: 20px;
+}
+.registerContent p {
+    font-family: Forum;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+.userInfo {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: Inter;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.userInfo input {
+    border: 1px solid #BB945F
+}
+.userInfo button {
+    margin: 10px 0 0;
+}
+.haveAccount {
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.haveAccount a{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #000;
+    margin: 0 10px 0;
+}
+.modalClose {
+    color: 0C0C0E;
+    float: right;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 15px 15px 0 0;
+    cursor: pointer;
+}
+.loginContent {
+    width: 250px;
+    height: 262px;
+    background-color: #FFFFFF;
+    /* padding: 0 15px ; */
+    font-weight: 400;
+    line-height: 20px;
+}
+.loginContent p {
+    font-family: Forum;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.myprofContent {
+    display: flex;
+    width: 600px;
+    height: 400px;
+    background-color: #FFFFFF;
+    padding: 0 ;
+    font-weight: 400;
+    line-height: 20px;
+}
+.myprofLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    gap: 15px;
+    width: 170px;
+    height: 100%;
+    background: #0C0C0E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.initialsBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #FFF;
+    color: #BB945F;
+    text-transform: uppercase;
+    align-self: center;
+}
+.myprofName {
+    color: #000;
+    text-transform: capitalize;
+    background-color: #fff;
+    width: 110px;
+    height: auto;
+    padding: 5px;
+    align-self: center;
+}
+.myprofName p {
+    margin: 5px;
+    padding: 4px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.myprofRight {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 100%;
+    background: #fff;
+    color: #0C0C0E;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    z-index: 2;
+}
+.myprofHeader {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+.myprofHeader p {
+    text-align: left;
+    font-family: Forum;
+    font-size: 40px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+.myprofRates {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 0 20px;
+}
+.myprofBooks {
+    width: 100%;
+    /* height: 400px; */
+    padding: 0 60px 0 20px;
+    box-sizing: border-box;
+    color: #0C0C0E;
+    font-family: Inter;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px; /* 80% */
+    text-transform: capitalize;
+}
+.myprofBooks p{
+    margin: 20px 0;
+}
+.myprofBooks ul {
+    height: 80px;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 2px;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 0px 0px 0px 30px;
+}
+.myprofBooks li {
+    margin: 10px 0 0 0;
+    white-space: nowrap;
+}
+.myprofCard {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    width: 100%;
+    padding: 0 20px;
+    /* margin-top: 20px; */
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+}
+.myprofCard img {
+    cursor: pointer;
+}
+
+.card {
+    z-index: 2
+}
+.cardContent {
+    width: 640px;
+    height: 540px;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    line-height: 20px;
+}
+.cardHeader {
+    height: 60px;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    padding: 0 20px;
+}
+.cardHeader p {
+    margin: 0;
+    padding: 20px 0;
+}
+.buyWrapper {
+    margin: 30px 40px;
+    display: flex;
+    align-content: start;
+    gap: 40px;
+    color: #000;
+    text-align: left;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+}
+.buyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    color: #000;
+}
+.buyForm fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.buyForm input {
+    width: 194px;
+    height: 16px;
+    border: 1px solid #BB945F;
+}
+.buyForm input:invalid {
+    /* color: red; */
+}
+.buyForm span:nth-of-type(1) {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 10px
+}
+.buyForm button {
+    margin: 0 25px 0 0;
+}
+.buyForm p {
+    display: inline-block; 
+    margin:0; 
+    vertical-align: bottom;
+    color: #0C0C0E;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+#code-one, #code-two, #cvc {
+    width: 45px
+}
+.buyDisclaimer {
+    width: 330px;
+    color: #8E8E8E;
+    text-align: left;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+} 
+/* responsives*/
+@media (max-width: 1440px) {
+    body, .main, footer  {
+        width: 99%
+    }
+    h1 {
+        margin-left: 20px;
+        width: 294px
+    }
+    .headerMenu {
+        gap: 25px
+    }
+    /* About */
+    .slider-inner {
+        width: 450px;
+        magtin: 0 25px;
+    }
+    .about-images {
+        justify-content: center;
+        gap: 0px;
+    }
+    .prev, .next {
+        display: flex;
+    }
+    .dot:nth-child(n+4) {
+        display: flex
+    }
+}
+@media(max-width: 1280px) {
+    /* Favorites */
+    .booksWrapper, .menu, .contactsWrapper, .cardsWrapper {
+        flex-direction: column;
+    }
+    .seasons {
+        position: sticky;
+        align-self: center
+    }
+    .booksContainer {
+        height: 2350px
+    }
+    .booksWrapper {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        height: auto;
+        margin-bottom: 40px
+    }
+    .coffeeAd {
+        width: 100%;
+    }
+    .menuItems {
+        justify-content: left
+    }
+    .cakes {
+        align-self: right
+    }
+    .contactsWrapper {
+        gap: 100px;
+    }
+    .contactsMap {
+        align-self: center
+    }
+    .cardsWrapper {
+        gap: 20px;
+    }
+    .findCard, .getCard {
+        align-self: center;
+        text-align: center
+    }
+    .getCard p:nth-child(n+1) {
+        text-align: center
+    }
+    /* end of Favorites */
+}
+@media(max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(13px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    nav ul {
+        position: fixed;
+        right: -100%;
+        top: 90px;
+        gap: 30;
+        flex-direction: column;
+        background-color: #0C0C0E;
+        width: 332px;
+        height: 480px;
+        text-align: center;
+        transition: 0.3s ease;
+        justify-content: left;
+        z-index: 1;
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+    nav ul.active {
+        right: 32px;
+    }
+}
+@media(max-width: 768px) {
+    .contactsMap {
+        width: 100%
+    }
+    .seasons {
+        gap: 10px
+    }
+}
